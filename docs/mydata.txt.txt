@@ -1,0 +1,819 @@
+Unit 1 
+4 Marks 
+Q1. Explain Constraint Violations for update operation   
+Ans: Constraint Violations for Update Operation 
+When we update data in a database, the new value must follow the defined constraints. If it 
+breaks any rule, it is called a constraint violation. 
+Constraints include: 
+• Primary key constraint – No duplicate and no null values allowed. 
+• Foreign key constraint – Value must match an existing value in another table. 
+• Unique constraint – No duplicate values allowed. 
+• Not Null constraint – Value cannot be empty. 
+• Check constraint – Data must satisfy a condition. 
+Q2. Explain relational data model 
+Relational Data Model 
+The Relational Data Model stores data in tables (relations) with rows and columns. 
+• Table (Relation): Represents an entity (like Student). 
+• Row (Tuple): Represents a single record. 
+• Column (Attribute): Represents a property of the entity (like Name, Age). 
+• Key: Ensures uniqueness (Primary Key, Foreign Key). 
+Q3. What is an Object-Oriented Database (OODB)? 
+Object-Oriented Database (OODB) 
+An Object-Oriented Database stores data in the form of objects, similar to object-oriented 
+programming. 
+• Data is stored as objects (like class objects). 
+• It supports classes and inheritance. 
+• It stores both data and methods (functions) together. 
+• It handles complex data like images, videos, and multimedia easily. 
+Example: 
+A “Student” class can store: 
+• Data → Roll no, Name 
+• Methods → Calculate marks, Display details 
+Each student record is stored as an object of the class. 
+Q4. Analyze the fundamental concepts of the relational model and examine how relational 
+constraints ensure data integrity. 
+Fundamental Concepts: 
+• Relation (Table): Data is stored in tables with rows and columns. 
+• Tuple (Row): Each row represents one record. 
+• Attribute (Column): Each column represents a property of data. 
+• Domain: Set of allowed values for an attribute. 
+• Key: Used to uniquely identify records (Primary Key, Candidate Key). 
+Relational Constraints and Data Integrity: 
+Constraints maintain correct and consistent data. 
+• Primary Key Constraint: Ensures each row is unique and not null. 
+• Foreign Key Constraint: Maintains relationship between tables. It must match a 
+primary key in another table. 
+• Unique Constraint: Prevents duplicate values in a column. 
+• Not Null Constraint: Prevents empty values. 
+• Check Constraint: Ensures data satisfies a condition. 
+These constraints prevent invalid data and maintain data integrity and consistency in the 
+database. 
+Q5. Analyze the role of Abstract Data Types (ADTs) in database system design. 
+An Abstract Data Type (ADT) defines data with its operations, without showing internal 
+implementation. 
+In database systems: 
+• Encapsulation – Data and operations are stored together and hidden from users. 
+• Data Abstraction – Users use data through defined operations, not internal 
+structure. 
+• Supports Complex Data – Helps manage images, videos, spatial data, etc. 
+• Improves Reusability – Same ADT can be used in different applications. 
+• Better Data Security – Internal data structure is protected from direct access. 
+Q6. Evaluate the advantages and limitations of polymorphism in database applications. 
+Polymorphism means the same operation can behave differently on different data types or 
+objects. 
+Advantages: 
+• Code Reusability – Same function can be used for different data types. 
+• Flexibility – Operations can work on multiple object types. 
+• Easy Maintenance – Changes can be made without affecting the whole system. 
+• Supports Complex Data – Useful in object-oriented databases for handling different 
+objects. 
+Limitations: 
+• Complex Design – System design becomes complicated. 
+• Performance Overhead – May reduce speed due to dynamic method binding. 
+• Difficult Debugging – Errors are harder to trace. 
+Q7. Explain domain, key, and referential integrity constraints with examples. 
+1. Domain Constraint 
+• It defines the allowed values for an attribute. 
+• Ensures data is stored in the correct format and range. 
+Example: 
+Age must be between 1 and 100. 
+If age = 150 → It violates the domain constraint. 
+2. Key Constraint 
+• Ensures each record in a table is unique. 
+• Usually enforced using a Primary Key. 
+Example: 
+StudentID must be unique. 
+Two students cannot have the same StudentID. 
+3. Referential Integrity Constraint 
+• Maintains relationship between two tables. 
+• A foreign key must match an existing primary key value in another table. 
+Example: 
+Order table has CustomerID as foreign key. 
+CustomerID must exist in the Customer table. 
+Q8. Explain the difference between database schema and database instance. 
+Difference between Database Schema and Database Instance 
+Aspect 
+Database Schema 
+Definition 
+The structure of the database (tables, 
+fields, constraints). 
+Database Instance 
+The actual data stored in the 
+database at a particular time. 
+Changeable? Fixed; rarely changes. 
+Changes frequently as data is 
+updated. 
+Example 
+Table Student(RollNo, Name, Age) with 
+keys. 
+Table contains actual rows: 101, 
+Neha, 22. 
+Level 
+Conceptual/Design level. 
+Physical/Real-time level. 
+Schema = blueprint; Instance = current snapshot of data. 
+Q9. Identify relations and attributes from a given database schema. 
+Identifying Relations and Attributes from a Database Schema 
+• Relation (Table): Represents an entity or concept in the database. Usually written as 
+a table name. 
+• Attributes (Columns): Properties or fields of the relation. Usually listed inside 
+parentheses after the table name. 
+Example Schema: 
+Student(RollNo, Name, Age, CourseID) 
+Course(CourseID, CourseName, Credits) 
+• Relations: Student, Course 
+• Attributes of Student: RollNo, Name, Age, CourseID 
+• Attributes of Course: CourseID, CourseName, Credits 
+Rule: Table name = Relation, Column names = Attributes. 
+Q10. Illustrate constraint violation using a simple table 
+Illustration of Constraint Violation 
+Table: Student 
+StudentID (PK) Name Age 
+101 
+Neha 24 
+102 
+Sanhita 23 
+Constraint: 
+• Primary Key (PK) → StudentID must be unique. 
+• Age → Must be between 1 and 100 (Domain Constraint). 
+Violation Examples: 
+1. Primary Key Violation: 
+Trying to insert 101, Priya, 21 → StudentID 101 already exists.   
+2. Domain Constraint Violation: 
+Trying to insert 103, Arjun, 150 → Age 150 is invalid.   
+The database rejects these updates to maintain integrity. 
+6 Marks 
+Q1. What are various features and advantages of OODB over other databases? 
+Features of OODB: 
+1. Objects as Data – Stores data as objects, like in programming languages. 
+2. Encapsulation – Data and methods (functions) are stored together. 
+3. Inheritance – Objects can inherit properties and methods from other objects. 
+4. Polymorphism – Same operation can behave differently for different objects. 
+5. Supports Complex Data – Handles images, videos, audio, and multimedia easily. 
+6. Querying Objects – Can query objects using object query languages. 
+Advantages over Relational Databases: 
+1. Better for Complex Data – Can store multimedia, spatial, and hierarchical data easily. 
+2. Reusability – Classes and objects can be reused in multiple applications. 
+3. Data Integrity & Security – Encapsulation protects internal data. 
+4. Improved Modeling – Closer to real-world entities due to object representation. 
+5. Efficient Navigation – Direct links between objects improve performance for certain 
+applications. 
+OODB is ideal for CAD, multimedia, engineering, and scientific applications where 
+complex data and object behavior are required. 
+Q2. Analyze the structure and components of the relational model, evaluate the role and 
+interdependence of its key constraints 
+1. Structure and Components: 
+• Relation (Table): Represents an entity (e.g., Student, Course). 
+• Tuple (Row): A single record in the table. 
+• Attribute (Column): Property of an entity (e.g., Name, Age). 
+• Domain: The set of allowed values for an attribute. 
+• Keys: Identify unique tuples and maintain relationships. 
+2. Key Constraints and Their Role: 
+• Primary Key: Uniquely identifies each tuple. Ensures no duplicates or nulls. 
+• Foreign Key: Maintains relationships between tables. Value must exist in referenced 
+table. 
+• Unique Key: Ensures uniqueness of a column’s values. 
+• Not Null: Prevents missing or empty data in important fields. 
+3. Interdependence of Constraints: 
+• Primary Key & Foreign Key: Foreign keys depend on primary keys of parent tables to 
+maintain referential integrity. 
+• Unique & Primary Key: Primary key is also unique, ensuring overall data uniqueness. 
+• Not Null & Key Constraints: Keys cannot be null, ensuring identification and integrity. 
+Q3. State referential and  Semantic integrity constraints 
+1. Referential Integrity Constraint: 
+• Ensures relationships between tables are valid. 
+• A foreign key must match a primary key in another table or be NULL. 
+• Example: 
+o Order table has CustomerID as a foreign key. 
+o The value must exist in Customer table. 
+2. Semantic Integrity Constraint: 
+• Ensures data makes sense according to real-world rules. 
+• Enforces logical correctness beyond simple format or uniqueness. 
+• Example: 
+o Age of a student must be ≥ 5 and ≤ 100. 
+o Salary cannot be negative. 
+Q4. Differentiate data abstraction, inheritance, Encapsulation and polymorphism feature 
+each with suitable example 
+1)Data Abstraction 
+• Definition: Hiding internal details of data and showing only essential information to 
+the user. 
+• Example: A Date class provides methods getDate() and setDate() without showing 
+how the date is stored internally. 
+2)Inheritance 
+• Definition: A mechanism where a class acquires properties and methods of another 
+class. 
+• Example: Student class inherits from Person class and automatically gets Name and 
+Age attributes. 
+3)Encapsulation 
+• Definition: Combining data and methods in a single unit (class) and restricting direct 
+access to some data. 
+• Example: BankAccount class has private balance and methods deposit() and 
+withdraw() to access it. 
+4)Polymorphism 
+• Definition: The ability of a method or function to behave differently based on the 
+object calling it. 
+• Example: draw() method in Shape class draws different shapes like Circle or 
+Rectangle differently. 
+Q5. Design a relational schema for a real-world application and justify the constraints 
+applied. 
+Application: University Management System 
+Tables and Attributes: 
+1. Student 
+• StudentID (PK) – Unique identifier for each student 
+• Name – Student name (Not Null) 
+• Age – Must be between 5 and 100 (Check constraint) 
+• CourseID (FK) – References Course.CourseID 
+2. Course 
+• CourseID (PK) – Unique course identifier 
+• CourseName – Name of the course (Not Null) 
+• Credits – Number of credits (Check: > 0) 
+3. Enrollment 
+• EnrollmentID (PK) – Unique identifier 
+• StudentID (FK) – References Student.StudentID 
+• CourseID (FK) – References Course.CourseID 
+• Grade – Check constraint: Must be between ‘A’ and ‘F’ 
+Justification of Constraints: 
+• Primary Key (PK): Ensures uniqueness of each record in a table (StudentID, CourseID, 
+EnrollmentID). 
+• Foreign Key (FK): Maintains referential integrity between related tables (e.g., Student 
+→ Course, Enrollment → Student & Course). 
+• Not Null: Important fields like Name, CourseName cannot be empty. 
+• Check Constraint: Validates domain rules (Age between 5–100, Credits > 0, Grade 
+between A–F). 
+Q6. Evaluate various strategies for handling constraint violations in relational database 
+systems. 
+When a database operation violates a constraint, the system must handle it to maintain data 
+integrity. Common strategies include: 
+1. Reject the Operation 
+• The database refuses the insert, update, or delete that violates the 
+constraint. 
+• Example: Trying to insert a duplicate StudentID is rejected. 
+•    Ensures strict data integrity. 
+2. Set Default or Null Values 
+• Replace missing or invalid values with a default value or NULL if allowed. 
+• Example: Age missing → set default age = 18. 
+• ⚠ May not always reflect real data. 
+3. Cascade Updates or Deletes 
+• Automatically update or delete related records to maintain referential 
+integrity. 
+• Example: Deleting a Course automatically deletes all Enrollment records 
+for that course. 
+4. Raise an Error with Custom Message 
+• Database generates an error message to inform the user about the 
+violation. 
+• Example: “Cannot insert duplicate primary key.” 
+Q7. Design a database example that demonstrates polymorphism using multiple classes. 
+Database Design Demonstrating Polymorphism 
+Shape (Parent Table/Class): 
+• ShapeID (PK) – Unique ID 
+• Color – Color of the shape 
+• Type – Type of shape(Circle, Rectangle, Triangle) 
+• Method: calculateArea() – Works differently for each shape 
+Circle (Child Table): 
+• ShapeID (PK, FK to Shape) 
+• Radius – Radius of the circle 
+• Method: calculateArea() → π × Radius² 
+Rectangle (Child Table): 
+• ShapeID (PK, FK to Shape) 
+• Length, Width – Dimensions 
+• Method: calculateArea() → Length × Width 
+Triangle (Child Table): 
+• ShapeID (PK, FK to Shape) 
+• Base, Height – Dimensions 
+• Method: calculateArea() → 0.5 × Base × Height 
+Explanation: 
+• The same operation calculateArea() works differently for each shape. 
+• Shape is the parent class, child tables implement specific behavior. 
+• This shows polymorphism in database design. 
+8. Evaluate different approaches to implementing class hierarchies in database systems. 
+Class hierarchies represent inheritance relationships in databases. There are three common 
+approaches: 
+1. Single Table Inheritance (Table per Hierarchy) 
+• Description: All classes in the hierarchy are stored in one table. 
+• Implementation: Add a Type column to identify subclass. 
+• Advantages: Simple, easy to query. 
+• Disadvantages: Many NULLs for fields not used by all subclasses. 
+• Example: Shape table with columns: ShapeID, Type, Radius, Length, Width, Base, 
+Height. 
+2. Class Table Inheritance (Table per Class) 
+• Description: Each class has its own table with all attributes. 
+• Advantages: No NULLs, clear separation of subclasses. 
+• Disadvantages: Querying requires joins between parent and child tables. 
+• Example: Shape table (ShapeID, Color, Type), Circle table (ShapeID, Radius), 
+Rectangle table (ShapeID, Length, Width). 
+3. Concrete Table Inheritance (Table per Concrete Class) 
+• Description: Only concrete subclasses have tables; parent class table may not 
+exist. 
+• Advantages: No joins needed, all attributes in one table per subclass. 
+• Disadvantages: Redundant storage of parent attributes in each subclass table. 
+• Example: Circle table (ShapeID, Color, Radius), Rectangle table (ShapeID, Color, 
+Length, Width). 
+Summary: 
+• Single Table: Simple, but many NULLs. 
+• Class Table: Clear structure, needs joins. 
+• Concrete Table: No joins, but redundancy exists. 
+Q9. Analyze the concept of polymorphism and examine its role in object-oriented 
+database systems. 
+Concept of Polymorphism: 
+• Polymorphism means one operation or method behaves differently for different 
+objects. 
+• It allows the same function name to perform different tasks based on the object 
+calling it. 
+• It is a key feature of object-oriented programming and databases. 
+Example: 
+A method calculateArea() can work differently for: 
+• Circle → π × r² 
+• Rectangle → Length × Width 
+• Triangle → 0.5 × Base × Height 
+Role of Polymorphism in Object-Oriented Database Systems (OODBMS): 
+• Supports Inheritance: Child classes override parent methods to provide specific 
+behavior. 
+• Improves Flexibility: Same operation works on different object types. 
+• Enhances Reusability: Common methods are defined once and reused. 
+• Better Data Modeling: Represents real-world objects more accurately. 
+• Efficient Query Processing: Queries can operate on different object types using the 
+same interface. 
+Conclusion: Polymorphism improves flexibility, reusability, and modeling capability in 
+object-oriented database systems. 
+Q10. Examine objects and their properties and analyze their advantages with suitable 
+examples. 
+Objects: 
+• An object is a real-world entity represented in an object-oriented database. 
+• It combines data (attributes) and behavior (methods/functions) into a single unit. 
+Properties of Objects: 
+1. Attributes (Data): Describe the object. 
+a. Example: Student object → Name, Age, RollNo 
+2. Methods (Behavior): Operations that can be performed on the object. 
+a. Example: Student object → calculateGrade(), displayDetails() 
+3. Identity: Each object has a unique identifier (Object ID or OID) 
+4. Encapsulation: Internal data is hidden; accessed only through methods 
+5. Inheritance: Objects can inherit properties and methods from parent objects 
+Advantages of Objects: 
+1. Reusability: Classes and objects can be reused in multiple applications. 
+a. Example: A Person class can be used for Student and Teacher. 
+2. Real-world Modeling: Objects represent real entities, making design intuitive. 
+a. Example: Car object with attributes (Model, Color) and methods (start(), 
+stop()). 
+3. Data Integrity & Security: Encapsulation protects internal data. 
+4. Supports Complex Data: Can store images, videos, or multimedia easily. 
+5. Polymorphism & Flexibility: Same method can behave differently for different 
+objects. 
+Conclusion: Objects in databases make data management structured, secure, and closer to 
+real-world modeling, improving application efficiency and maintainability. 
+Unit 2 
+6 Marks 
+Q1. Analyze the process of parallel query optimization and discuss how different 
+optimization strategies affect query execution performance. 
+Parallel Query Optimization: 
+• It is the process of dividing a query into smaller parts and executing them 
+simultaneously using multiple processors. 
+• It improves query execution speed and system performance. 
+• The optimizer selects the best execution plan for parallel processing. 
+Steps in Parallel Query Optimization: 
+1. Query Decomposition – Break the query into smaller sub-queries. 
+2. Data Partitioning – Divide data into parts for parallel execution. 
+3. Task Allocation – Assign sub-tasks to different processors. 
+4. Result Merging – Combine results from parallel tasks. 
+Optimization Strategies: 
+1. Horizontal Partitioning 
+o Data is divided into rows across multiple processors. 
+o Improves performance for large tables. 
+2. Vertical Partitioning 
+o Data is divided by columns. 
+o Useful when queries access limited attributes. 
+3. Cost-Based Optimization 
+o Selects the execution plan with the lowest estimated cost. 
+o Improves efficiency by reducing resource usage. 
+4. Rule-Based Optimization 
+o Uses predefined rules to choose execution plans. 
+o Simpler but less flexible than cost-based. 
+Effect on Performance: 
+• Reduces query response time. 
+• Improves resource utilization. 
+• Handles large datasets efficiently. 
+• But excessive parallelism may increase communication overhead. 
+Q2. Evaluate the effectiveness of different recovery techniques in distributed 
+transactions for ensuring fault tolerance and atomicity 
+Distributed Transactions: 
+• A transaction that runs on multiple distributed databases or nodes. 
+• Must maintain atomicity, consistency, and fault tolerance even if failures occur. 
+Recovery Techniques: 
+1. Two-Phase Commit (2PC) 
+• Used to ensure atomic commitment across all participating nodes. 
+• Phase 1: Coordinator asks all nodes to prepare. 
+• Phase 2: If all nodes agree → commit; otherwise → abort. 
+•    Ensures strong atomicity. 
+•   Slow and may block if coordinator fails. 
+2. Three-Phase Commit (3PC) 
+• Improved version of 2PC. 
+• Adds an extra phase to reduce blocking. 
+• Nodes move through prepare → pre-commit → commit. 
+•    Reduces blocking problem. 
+•   More complex and high communication cost. 
+3. Logging and Checkpointing 
+• Transactions record changes in a log file. 
+• If failure occurs, system restores data from logs or checkpoints. 
+•    Helps in fast recovery. 
+•   Log management increases storage overhead. 
+4. Replication-Based Recovery 
+• Data is copied to multiple nodes. 
+• If one node fails, data is recovered from another replica. 
+•    High availability and fault tolerance. 
+•   Requires extra storage and synchronization. 
+Q3. Explain data fragmentation. ? Explain horizontal and vertical fragmentation. 
+Data Fragmentation 
+• Data fragmentation is the process of dividing a large database into smaller parts and 
+storing them at different sites in a distributed database system. 
+• It improves performance, availability, and data access speed. 
+• Fragmented data can be stored at different locations but logically belongs to one 
+database. 
+Types of Fragmentation: 
+1. Horizontal Fragmentation 
+• A table is divided into rows (tuples) based on a condition. 
+• Each fragment contains a subset of rows. 
+• Example: 
+o Student table is divided by department. 
+o CSE students stored at one site, ECE students at another site. 
+•    Useful when different locations access different rows frequently. 
+2. Vertical Fragmentation 
+• A table is divided into columns (attributes). 
+• Each fragment contains a subset of columns with the primary key. 
+• Example: 
+o Employee table divided into: 
+▪ Fragment 1 → EmployeeID, Name 
+▪ Fragment 2 → EmployeeID, Salary, Department 
+•    Useful when different users access different attributes. 
+Q4. Compare and contrast different consensus algorithms (e.g., Paxos, Raft, PBFT, Proof of 
+Work (PoW), and Proof of Stake (PoS)). 
+Algorithm Type Main Purpose Advantages Disadvantages 
+Paxos Distributed 
+system 
+Achieve 
+agreement in 
+unreliable 
+networks 
+Strong consistency, 
+fault tolerant 
+Complex to 
+implement and 
+understand 
+Raft Distributed 
+system 
+Simplified version 
+of Paxos 
+Easier to 
+implement, clear 
+leader election 
+Less flexible than 
+Paxos 
+PBFT (Practical 
+Byzantine Fault 
+Tolerance) 
+Blockchain / 
+Distributed 
+system 
+Handle malicious 
+nodes 
+Fast finality, works 
+in faulty 
+environments 
+High 
+communication 
+overhead 
+Proof of Work 
+(PoW) Blockchain 
+Validate 
+transactions 
+through mining 
+Highly secure, 
+decentralized 
+High energy 
+consumption, slow 
+Proof of Stake 
+(PoS) Blockchain Validate based on 
+stake ownership 
+Energy efficient, 
+faster than PoW 
+Wealth-based 
+control risk 
+ 
+Q6. Differentiate between four parallel database architectures by analyzing their structures 
+and operational features with diagrams.  
+Parallel database systems improve performance by using multiple processors and disks. The 
+four main architectures are: 
+1. Shared Memory Architecture 
+• All processors share common memory and disk. 
+• Easy communication between processors. 
+•   Not scalable for large systems. 
+Diagram: 
+      CPU1   CPU2   CPU3 
+        \      |      / 
+          ---- Shared Memory ---- 
+                  | 
+                Shared Disk 
+2. Shared Disk Architecture 
+• Processors have separate memory but share the same disk. 
+• Better scalability than shared memory. 
+• Disk access may become a bottleneck. 
+Diagram: 
+ CPU1   CPU2   CPU3 
+   |      |      | 
+  Mem1   Mem2   Mem3 
+        \   |   / 
+        ---- Shared Disk ---- 
+3. Shared Nothing Architecture 
+• Each processor has its own memory and disk. 
+• Nodes communicate through a network. 
+•    Highly scalable and widely used. 
+Diagram: 
+ CPU1 -- Disk1 
+ CPU2 -- Disk2 
+ CPU3 -- Disk3 
+   |       |       | 
+  Network Communication 
+4. Hierarchical (Hybrid) Architecture 
+• Combination of shared memory and shared nothing. 
+• Organized in multi-level structure. 
+• Used in large distributed systems. 
+Diagram: 
+        Cluster Level 
+      ------------------- 
+      |        |        | 
+   Subsystem1 Subsystem2 Subsystem3 
+   (Shared Memory inside each) 
+Conclusion: 
+• Shared Memory → Simple but less scalable. 
+• Shared Disk → Better but disk contention exists. 
+• Shared Nothing → Most scalable and widely used. 
+• Hierarchical → Hybrid for large systems. 
+Q5. State and explain Round robin, Hash and Range partitioning to achieve I/O 
+Parallelism 
+I/O parallelism improves performance by dividing data into partitions and accessing them 
+simultaneously from multiple disks or nodes. Common partitioning techniques are: 
+1. Round Robin Partitioning 
+• Data is distributed evenly and sequentially across partitions. 
+• Each new record is placed in the next partition in rotation. 
+• Simple and balances load evenly. 
+•   Not based on data value. 
+Example: 
+Records → R1, R2, R3, R4 
+• Partition 1 → R1, R4 
+• Partition 2 → R2 
+• Partition 3 → R3 
+Data stored in circular order. 
+Hash Partitioning 
+• Data is distributed using a hash function on a key attribute. 
+• Records with the same hash value go to the same partition. 
+•    Good for equality searches and balanced distribution. 
+•   Range queries are difficult. 
+Example: 
+Hash on StudentID 
+• Hash(StudentID) → Partition number 
+If hash result = 2 → Record stored in Partition 2. 
+3. Range Partitioning 
+• Data is divided based on a range of values of an attribute. 
+• Each partition stores values within a specific range. 
+•    Good for range queries. 
+•   Uneven data distribution possible. 
+Example: 
+Age 1–20 → Partition 1 
+Age 21–40 → Partition 2 
+Age 41–60 → Partition 3 
+Q7. Analyze the process of parallel query optimization and assess its effectiveness in 
+reducing query execution time. 
+Parallel Query Optimization: 
+• It is the process of dividing a query into smaller sub-queries and executing them 
+simultaneously on multiple processors or nodes. 
+• The main goal is to reduce query execution time and improve system performance. 
+• The optimizer selects the best parallel execution plan based on cost and resources. 
+Steps in Parallel Query Optimization: 
+1. Query Decomposition – Break the complex query into smaller parts. 
+2. Data Partitioning – Divide data into multiple partitions for parallel access. 
+3. Task Assignment – Assign sub-queries to different processors. 
+4. Parallel Execution – Execute tasks simultaneously. 
+5. Result Merging – Combine results from all processors. 
+6. Effectiveness in Reducing Query Time: 
+7.    
+Reduces Response Time – Multiple processors work together, so execution is 
+faster. 
+Improves Resource Utilization – Uses CPU and disk resources efficiently. 
+Handles Large Data Efficiently – Suitable for big databases and complex 
+queries. 
+May Increase Overhead – Communication and synchronization between 
+processors may reduce performance if not managed properly. 
+Q8. How a query in a distributed database environment is executed?Explain with a sample 
+example. 
+In a distributed database, data is stored at multiple sites. When a user executes a query, it is 
+processed across different locations where data is stored. 
+Steps in Query Execution: 
+1. Query Submission – User submits a query to the local site. 
+2. Query Parsing & Optimization – The system checks syntax and creates an 
+optimized execution plan. 
+3. Data Localization – The system identifies where the required data is stored. 
+4. Query Decomposition – The query is divided into sub-queries for different sites. 
+5. Remote Execution – Sub-queries are executed at respective sites. 
+6. Result Collection & Merging – Results from all sites are collected and combined. 
+7. Final Output – The final result is sent to the user. 
+Example: 
+If Student table is at Site A and Course table is at Site B, a join query will fetch data from 
+both sites, process it, and combine the results before returning the output. 
+Q9. Analyze the concept of query in parallelism and compare inter operator, intra operator, 
+intra query parallelism 
+Query Parallelism: 
+• It means executing a database query using multiple processors simultaneously to 
+improve performance. 
+• It reduces query execution time and improves resource utilization. 
+• Large queries are divided into smaller tasks and processed in parallel. 
+Types of Query Parallelism: 
+1. Inter-Operator Parallelism 
+• Different operators in a query execution plan run simultaneously. 
+• Example: Join, Selection, and Projection executed at the same time on different 
+processors. 
+•    Improves speed by parallel execution of different operations. 
+2. Intra-Operator Parallelism 
+• A single operator is divided into smaller parts and executed in parallel. 
+• Example: A large table is divided into partitions, and the JOIN operation is performed 
+on each partition simultaneously. 
+•    Useful for large datasets. 
+3. Intra-Query Parallelism 
+• A single query is split into multiple sub-queries and executed in parallel. 
+• Combines both inter and intra-operator techniques. 
+•    Reduces overall query response time significantly. 
+Q10. Compare and evaluate shared-memory, shared-disk, and shared-nothing architectures. 
+Comparison of Shared-Memory, Shared-Disk, and Shared-Nothing Architectures (6 Marks) 
+These are parallel database architectures used to improve performance and scalability. 
+Architecture Structure 
+Advantages 
+Disadvantages 
+Shared 
+Memory 
+Multiple processors 
+share common memory 
+and disk 
+Fast communication, 
+easy to manage 
+Not scalable, memory 
+contention problem 
+Shared Disk 
+Processors have 
+separate memory but 
+share common disk 
+Better scalability than 
+shared memory 
+Disk bottleneck, 
+synchronization overhead 
+Shared 
+Nothing 
+Each processor has its 
+own memory and disk 
+Highly scalable, no 
+resource contention 
+Complex data management, 
+network communication 
+cost 
+Evaluation: 
+• Shared Memory is suitable for small systems but limited in scalability. 
+• Shared Disk improves scalability but may face disk access conflicts. 
+• Shared Nothing is the most scalable and widely used in large distributed and cloud 
+systems. 
+4 Marks 
+Q1. What is a Distributed Transaction? 
+What is the need for a Distributed Transaction? 
+What is a Distributed Transaction? (4 Marks) 
+• A distributed transaction is a transaction that runs on multiple databases or sites in 
+a distributed system. 
+• It accesses and updates data stored at different locations. 
+• It must maintain ACID properties across all sites to ensure data consistency. 
+Example: 
+A bank transaction that transfers money from an account stored at Site A to another account 
+stored at Site B. 
+Need for Distributed Transaction: 
+• To manage data stored at multiple locations. 
+• To ensure data consistency across different database sites. 
+• To support large-scale applications like banking, e-commerce, and cloud systems. 
+• To maintain atomicity and reliability even if some sites fail. 
+Q2. What are two performance measures to speed up and scale up. State the Formulas. 
+Q3. Explain design issues of parallel system 
+Designing a parallel system involves several challenges to ensure good performance and 
+efficiency. 
+• Data Distribution: Data must be properly divided among processors to balance 
+workload. Poor distribution reduces performance. 
+• Load Balancing: Tasks should be evenly distributed to avoid some processors being 
+overloaded while others are idle. 
+• Communication Overhead: Processors need to communicate with each other. Too 
+much communication reduces speed. 
+• Synchronization: Processes must coordinate properly to avoid data inconsistency. 
+• Fault Tolerance: System should handle processor or node failures without losing 
+data. 
+Q4. What are the two phases in the Two-Phase Commit (2PC) protocol? 
+The Two-Phase Commit (2PC) protocol ensures atomicity in distributed transactions. It has 
+two phases: 
+1. Prepare Phase (Voting Phase) 
+• The coordinator asks all participating sites to prepare for commit. 
+• Each site checks whether it can commit the transaction. 
+• Sites send their vote (Yes/No) to the coordinator. 
+2. Commit Phase (Decision Phase) 
+• If all sites vote Yes, the coordinator sends a Commit message. 
+• If any site votes No, the coordinator sends an Abort message. 
+• All sites follow the final decision. 
+Q5. What are the three phases in the Three-Phase Commit protocol? 
+The Three-Phase Commit (3PC) protocol improves 2PC by reducing the blocking problem. It 
+has three phases: 
+1. Can-Commit Phase 
+• The coordinator asks all participating sites if they can commit. 
+• Sites check and send their vote (Yes/No) to the coordinator. 
+2. Pre-Commit Phase 
+• If all sites vote Yes, the coordinator sends a Pre-Commit message. 
+• Sites prepare to commit and acknowledge the message. 
+3. Commit Phase 
+• After receiving acknowledgments, the coordinator sends the Commit message. 
+• If any site votes No, the transaction is aborted. 
+Q6. Explain shared-memory and shared-disk architectures. 
+1. Shared-Memory Architecture: 
+• Multiple processors share the same memory and disk. 
+• Processors communicate through common shared memory. 
+• Suitable for small systems with limited processors. 
+Advantages: 
+• Fast communication between processors. 
+• Easy to manage and implement. 
+Disadvantages: 
+• Not scalable for large systems. 
+• Memory contention may reduce performance. 
+2. Shared-Disk Architecture: 
+• Processors have separate memory but share the same disk storage. 
+• Each processor accesses the common disk independently. 
+Advantages: 
+• Better scalability than shared-memory. 
+• Processors work independently. 
+Disadvantages: 
+• Disk access conflicts may occur. 
+• Requires synchronization to avoid data inconsistency. 
+Q7. Differentiate between shared-nothing and shared-memory architectures 
+Aspect 
+Shared-Memory 
+Structure 
+Multiple processors share common 
+memory and disk 
+Shared-Nothing 
+Each processor has its own 
+memory and disk 
+Communication 
+Through shared memory 
+Through network 
+communication 
+Scalability 
+Not highly scalable 
+Highly scalable 
+Performance 
+Fast communication but limited 
+expansion 
+Good performance for large 
+systems 
+Resource 
+Contention 
+High (shared memory bottleneck) 
+No resource sharing, less 
+contention 
+Usage 
+Small systems 
+Large distributed and cloud 
+systems 
+Q8. List the types of parallelism used in query processing. 
+The main types of parallelism used to improve query performance are: 
+1. Inter-Query Parallelism 
+a. Multiple queries are executed simultaneously. 
+b. Improves system throughput. 
+2. Intra-Query Parallelism 
+a. A single query is divided into sub-queries and executed in parallel. 
+3. Inter-Operator Parallelism 
+a. Different operators (SELECT, JOIN, PROJECT) in a query run at the same time. 
+4. Intra-Operator Parallelism 
+a. A single operator is divided into parts and processed in parallel on data 
+partitions. 
+Q9. Define distributed catalog management. ? Explain the role of a catalog in distributed 
+databases. 
+Definition: 
+• Distributed catalog management is the process of storing and managing metadata 
+about database objects in a distributed database system. 
+• The catalog information is stored at multiple sites and contains details about tables, 
+fragments, locations, users, and constraints. 
+Role of Catalog in Distributed Databases: 
+• Stores information about data location and fragmentation. 
+• Maintains details about tables, attributes, indexes, and users. 
+• Helps the system locate data quickly during query execution. 
+• Supports query optimization by providing metadata. 
+• Ensures proper data management and coordination between different sites. 
+Q10. llustrate a distributed DBMS architecture with a diagram. 
+A Distributed DBMS (DDBMS) stores data at multiple sites but manages it as a single 
+database system. It connects different sites through a network. 
+Explanation: 
+• Each site has its own database and processor. 
+• Sites are connected through a network. 
+• Data may be fragmented or replicated across sites. 
+• Users access data as if it is stored in a single database. 
+ 
+ 
+ 
+ 
+ 
+ 
